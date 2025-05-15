@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Personal Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f6fc;
+      color: #2e2e2e;
+    }
+
+    header {
+      background-color: #6a0dad;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #5c0aa1;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    section, article {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    h1, h2, h3 {
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    a {
+      color: #6a0dad;
+    }
+
+    video, audio {
+      width: 100%;
+      margin-top: 15px;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #6a0dad;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        display: flex;
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>CHANDANA TADAGANI NAGARAJ</h1>
+    <p>Student | MSRIT | Tech Enthusiast</p>
+  </header>
+
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#media">Media</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Greetings, I'm Chandana, currently doing masters in Computer Networks in Ramaih Institute of Technology, Bengaluru. </p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>Unique image encryption</li>
+        <li>Library Management</li>
+        <li>Swiggy User interface</li>
+      </ul>
+    </section>
+
+    <section id="media">
+      <h2>Multimedia</h2>
+      <article>
+        <h3>Introduction Video</h3>
+        <video controls>
+          <source src="intro.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </article>
+
+      <article>
+        <h3>Background Music</h3>
+        <audio controls autoplay loop>
+          <source src="background.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </article>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <ul>
+        <li>Email: chandanatadagani@gmail.com</li>
+        <li>GitHub: <a href="https://github.com/chandanatn19" target="_blank">github.com/chandanatn</a></li>
+        <li>LinkedIn: <a href="https://linkedin.com/in/chandanatn" target="_blank">linkedin.com/in/chandanatn</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Chandana T N. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
