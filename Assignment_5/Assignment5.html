@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Feedback Page with Web Storage</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    article, aside {
+      max-width: 600px;
+      background-color: white;
+      padding: 20px 30px;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2 {
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    textarea {
+      margin-top: 5px;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <article>
+    <h1>Feedback Form</h1>
+    <form>
+      <label for="username">Your Name:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="feedback">Your Feedback:</label>
+      <textarea id="feedback" name="feedback" rows="5" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </article>
+
+  <aside>
+    <h2>What is Web Storage?</h2>
+    <p>
+      <strong>localStorage</strong> and <strong>sessionStorage</strong> are part of the Web Storage API, which allows websites to store data in a user's browser.
+    </p>
+    <p>
+      <strong>localStorage</strong> stores data with no expiration time. This data remains available even after the browser is closed and reopened.
+    </p>
+    <p>
+      <strong>sessionStorage</strong> stores data for the duration of a page session. It is cleared when the page is closed.
+    </p>
+    <p>
+      These are commonly used to store user preferences, temporary data, or session-based information without needing a server.
+    </p>
+  </aside>
+
+</body>
+</html>
