@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandana T N - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .resume-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            min-height: 100vh;
+        }
+
+        /* Left Sidebar */
+        .sidebar {
+            background: linear-gradient(180deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 40px 30px;
+            position: relative;
+        }
+
+        .sidebar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #3498db, #e74c3c, #f39c12);
+        }
+
+        .profile-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .profile-circle {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            font-weight: bold;
+            color: white;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .name {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .title {
+            font-size: 14px;
+            color: #bdc3c7;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .sidebar-section {
+            margin-bottom: 35px;
+        }
+
+        .sidebar-heading {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #3498db;
+            position: relative;
+        }
+
+        .sidebar-heading::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background: #3498db;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .contact-icon {
+            width: 20px;
+            height: 20px;
+            background: #3498db;
+            border-radius: 50%;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+
+        .skill-item {
+            margin-bottom: 15px;
+        }
+
+        .skill-name {
+            font-size: 14px;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .skill-bar {
+            height: 6px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #3498db, #2980b9);
+            border-radius: 3px;
+            animation: progressLoad 2s ease-out;
+        }
+
+        @keyframes progressLoad {
+            from { width: 0; }
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 50px 40px;
+            background: #fafafa;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #3498db, #2980b9);
+            border-radius: 2px;
+        }
+
+        .summary-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid #3498db;
+        }
+
+        .experience-item, .education-item {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .experience-item:hover, .education-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .job-title, .degree-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .company-name, .university-name {
+            font-size: 16px;
+            color: #3498db;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .duration, .year {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .job-responsibilities {
+            list-style: none;
+            padding: 0;
+        }
+
+        .job-responsibilities li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            color: #555;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .job-responsibilities li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .resume-wrapper {
+                grid-template-columns: 1fr;
+                margin: 10px;
+            }
+            
+            .sidebar {
+                padding: 30px 20px;
+            }
+            
+            .main-content {
+                padding: 30px 20px;
+            }
+            
+            .profile-circle {
+                width: 100px;
+                height: 100px;
+                font-size: 40px;
+            }
+            
+            .name {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-wrapper">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="profile-section">
+                <div class="profile-circle">CT</div>
+                <div class="name">CHANDANA T N</div>
+                <div class="title">Software Developer Intern</div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-heading">Contact</h3>
+                <div class="contact-item">
+                    <div class="contact-icon"></div>
+                    <span>chandanatadagani.com</span>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"></div>
+                    <span>9353303535</span>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"></div>
+                    <span>Bengaluru, India</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-heading">Skills</h3>
+                <div class="skill-item">
+                    <div class="skill-name">HTML5 & CSS3</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Data Structures</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Networking</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Git Version Control</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <section class="section">
+                <h2 class="section-title">Professional Summary</h2>
+                <p class="summary-text">
+                    Enthusiastic Software Developer Intern with strong problem-solving skills and proficiency in Data Structures, eager to contribute to innovative projects while expanding technical expertise in a collaborative environment.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Work Experience</h2>
+                
+                <div class="experience-item">
+                    <h3 class="job-title">Junior Developer</h3>
+                    <div class="company-name">Lam Research</div>
+                    <div class="duration">2022 - 2023</div>
+                    <ul class="job-responsibilities">
+                        <li>Developed and maintained company websites</li>
+                        <li>Implemented responsive design principles</li>
+                        <li>Led a team of junior developers</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3 class="job-title">Web Developer</h3>
+                    <div class="company-name">AdTech Digital Agency</div>
+                    <div class="duration">2021 - 2022</div>
+                    <ul class="job-responsibilities">
+                        <li>Created custom WordPress themes</li>
+                        <li>Optimized website performance</li>
+                        <li>Collaborated with designers</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="education-item">
+                    <h3 class="degree-title">B.E in Computer Science</h3>
+                    <div class="university-name">VTU</div>
+                    <div class="year">2020 - 2024</div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
