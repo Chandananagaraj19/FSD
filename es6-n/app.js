@@ -6,7 +6,7 @@ import User, { validateEmail } from './user.js';
 console.log("************* Demo **************")
 console.log("Add: ",add(2,3));
 console.log("Subtract: ",substract(2,3));
-console.log(sayHello("Darshan"));
+console.log(sayHello("Chandana"));
 
 console.log("\n\n\n************* Assignment 1 **************")
 console.log("Sum: ",sum(2,3));
@@ -28,7 +28,7 @@ if (word) {
 
 console.log("\n\n\n************* Assignment 3 **************")
 
-const user = new User("Darshan");
+const user = new User("Chandana");
 console.log(user.getInfo());
 
 const email = "darshan@gmail.com";
