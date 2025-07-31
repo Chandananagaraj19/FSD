@@ -31,7 +31,7 @@ console.log("\n\n\n************* Assignment 3 **************")
 const user = new User("Chandana");
 console.log(user.getInfo());
 
-const email = "darshan@gmail.com";
+const email = "chandana@gmail.com";
 const isValid = validateEmail(email);
 console.log(`Is "${email}" a valid email?`, isValid);
 console.log("\n\n\n************* Assignment 2 **************")
